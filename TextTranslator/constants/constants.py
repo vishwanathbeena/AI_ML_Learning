@@ -1,0 +1,1 @@
+east_path = 'C:/Users/dt224910/PycharmProjects/TextTranslator/models/frozen_east_text_detection.pb'
