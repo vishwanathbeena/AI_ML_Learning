@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+	<table style="border-collapse: collapse;width:500px;margin:auto;background-color:#d6ffff;">
+		<tr > 
+		<td align="center" colspan="3" >
+		<h4>Resume Ranking according to the percentage match</h4>
+		</td>
+		</tr>
+         {% for item in result %}
+            <tr>
+			   <td> {{ loop.index }}</td>
+               <td> {{ item[0] }} </td>
+               <td> {{ item[1] }} </td>
+            </tr>
+         {% endfor %}
+    </table>
+</div>
+</body>
+</html>

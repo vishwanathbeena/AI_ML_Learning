@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Rating Page</title>
+</head>
+<body>
+    
+    <form id = resumeForm method="post" style="width:500px;margin:auto;" enctype="multipart/form-data" target="_blank" >
+		<div  style="vertical-align: middle;text-align: center;">
+			<img src="/static/Home_page_image.png" style="width: 50px;height: 50px;display: inline-block;margin: 0px 0px 0px 15px;"></img>
+			<h2 style="text-align:center;font-family: sans-serif;font-weight: normal;display: inline-block;width: 52%;margin: 0 0 1px 3px;vertical-align: 15px;">Smart Resume Ranker</h2>
+		</div>
+		<div style="margin: 20px;border:2px solid #333;background-color:#d6ffff;">
+			<div>
+				<h3 style="font-family: sans-serif;font-weight: normal">Upload Requirements Document:</h3>
+				<input type="file" name="reqFile">
+			</div>
+			<div>
+				<h3 style="margin-right:90px; font-family: sans-serif;font-weight: normal">Upload Resume Files:</h3>
+				<input type="file" name="resume_files" multiple>
+			</div>
+			<div style="margin-top:20px;text-align:center;">
+				<button type="submit"style="width: 20%;height: 25px;background: transparent;color: white;background-color: dimgrey;"  value="submit">Submit</button>
+			 </div>
+			 <div style="margin:20px">
+				{% with messages = get_flashed_messages() %}
+				{% if messages %}
+				<ul class=flashes>
+					{% for message in messages %}
+					<li>{{ message }}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+				{% endwith %}
+			</div>
+		</div>
+    </form>
+</body>
+</html>
